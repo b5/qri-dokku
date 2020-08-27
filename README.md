@@ -8,6 +8,8 @@ The original goal was to provide a way to automate the update of a qri dataset. 
 
 Because qri comes with a built-in http server we can simply run it in the cloud and interact with it via http. Using dokku, we can eliminate some of the headaches of setting up a containerized cloud service (dokku will handle the domain names, volumes, etc, and can automatically swap out containers when new code is pushed) 
 
+For an example of an automated dataset update script that uses this dokku-ized qri, see [`brooklyn-weather-bot`](https://github.com/chriswhong/qri-weather-bot)
+
 ## Setup
 
 Running qri on dokku is as simple as creating a new dokku app, mapping a volume so that the app can persist data, setting up a qri user, and adding a domain name.
